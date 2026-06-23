@@ -34,7 +34,7 @@ model.load_state_dict(torch.load("student_classifier_pass_fail.pth", map_locatio
 model.eval()
 
 # ---------------- UI ----------------
-st.title("🎓 Student Pass/Fail Predictor")
+st.title("Student Pass/Fail Predictor")
 
 study_hours = st.slider(
     "Study Hours per Day",
@@ -68,8 +68,8 @@ if st.button("Predict"):
         probability = torch.sigmoid(output).item()
 
     if probability >= 0.5:
-        st.success(f"PASS ✅")
+        st.success(f"PASS")
     else:
-        st.error(f"FAIL ❌")
+        st.error(f"FAIL")
 
     st.write(f"Pass Probability: {probability:.4f}")
