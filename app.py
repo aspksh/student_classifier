@@ -72,4 +72,4 @@ if st.button("Predict"):
     else:
         st.error(f"FAIL")
 
-    st.write(f"Pass Probability: {probability:.4f}")
+    st.write(f"Pass Probability: {probability * 100 :.4f}")
