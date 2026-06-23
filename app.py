@@ -30,7 +30,7 @@ attendance_max = 100.0
 
 # ---------------- Load Model ----------------
 model = StudentClassifier()
-model.load_state_dict(torch.load("student_model.pth", map_location="cpu"))
+model.load_state_dict(torch.load("student_classifier_pass_fail.pth", map_location="cpu"))
 model.eval()
 
 # ---------------- UI ----------------
